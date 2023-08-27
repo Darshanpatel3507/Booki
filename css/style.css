@@ -1,0 +1,440 @@
+/* ..........Box-sizing......................................  */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: border-box;
+}
+html, 
+body{
+    font-family: 'Raleway';
+}
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0 5px;
+}
+ul, li, a, p{
+    font-size: 14px;
+    color: #000;
+}
+
+
+/* Header.................................................................................... */
+header .container {
+    padding: 0;
+}
+.leftright-sec {
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-line-pack: justify;
+    justify-content: space-between;
+}
+.header-logo {
+    margin-top: 35px;
+}
+header img {
+    width: 110px;
+}
+header .res-img {
+    display: none;
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li:first-child {
+    padding-right: 40px;
+}
+header nav ul li {
+    padding-right: 30px;
+    margin-top: 40px;
+    display: inline;
+}
+header ul li a:hover {
+    color: #0065FC;
+}
+header ul li a{
+    position: relative;
+    font-weight: 100;
+    font-size: 14px;
+}
+header ul li a:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    background-color: #0065FC;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out;
+    top: -40px;
+}
+header ul li a:hover:before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+.listing_items ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.listing_items ul li{
+    padding:0 20px;
+}
+
+
+/* Find-place........................................................... */
+
+.main-title {
+    font-size: 20px;
+    padding-top: 30px;
+}
+.Find-place span {
+    font-weight: 100;
+    line-height: 2;
+    font-size: 15px;
+}
+
+/* Search-area........................................................... */
+.search-area {
+    display: flex;
+}
+.search-area .location-dot {
+    padding: 16px 17px 15px;
+    background: #F2F2F2;
+    border-radius: 10px 0 0 10px;
+    font-size: 16px;
+}
+.search-area .search {
+    display: inherit;
+}
+.search-area .search input#fname {
+    padding: 10px 0px 10px 13px;
+    border: 1px solid #f2f2f2;
+    font-weight: 900;
+    font-size: 15px;
+}
+.main .search-area .search input#fname:focus-visible {
+    outline: none;
+}
+.magnifying-glass {
+    display: none !important;
+}
+input.search-btn {
+    padding: 13px 16px;
+    border: 1px solid #0065FC;
+    background: #0065FC;
+    color: #fff;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+/* Filters........................................................... */
+
+.filters {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+}
+.filters p {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.filters .icons {
+    display: inherit;
+    padding: 0 20px;
+}
+.filters .icons .categary {
+    margin-right: 20px;
+}
+.filters p, 
+.filters .icons .categary a{
+    font-size: 17px;
+}
+.filters .icons .categary a {
+    padding: 9px 20px;
+    border: 2px solid #f2f2f2;
+    border-radius: 100px;
+    font-weight: 600;
+}
+.filters .icons .categary a i {
+    border-radius: 100%;
+    padding: 8px;
+    border: 2px solid #deebff;
+    background: #deebff;
+    margin-left: -20px;
+    margin-right: 10px;
+    color: #0065fc;
+    width: 40px;
+    height: 39px;
+}
+.filters .icons .categary a i:before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.filters .icons .categary a:hover {
+    color: #0065fc;
+    transition: all 0.5s ease-in-out;
+    border: 2px solid #0065fc;
+    box-shadow: 2px 11px 38px -14px rgba(0,101,252,0.51);
+    -webkit-box-shadow: 2px 11px 38px -14px rgba(0,101,252,0.51);
+    -moz-box-shadow: 2px 11px 38px -14px rgba(0,101,252,0.51);
+}
+
+/* notification........................................................... */
+.notification {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.notification i {
+    border: 2px solid #f2f2f2;
+    padding: 7px 12px;
+    border-radius: 50%;
+    font-size: 11px;
+    color: #0065FC;
+    position: relative;
+    top: -6px;
+}
+
+
+/* accomodations-main........................................................... */
+.accomodations-main {
+    margin: 30px 0;
+    display: flex;
+    column-gap: 30px;
+}
+.acco-in-marseille, 
+.most-popular {
+    background: #F2F2F2;
+    border-radius: 15px;
+    flex: 2;
+    padding: 30px;
+}
+.most-popular{
+    flex: 1;
+}
+.accomodations-main h3 {
+    margin-bottom: 20px;
+}
+.accomodations-main .boxes {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 30px;
+}
+.accomodations-main .inn-box, 
+.most-popular .boxes .row {
+    border: 4px solid #fff;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    background: #fff;
+    flex: 1;
+    box-shadow: 2px 11px 38px -14px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 2px 11px 38px -14px rgba(0,0,0,0.4);
+    -moz-box-shadow: 2px 11px 38px -14px rgba(0,0,0,0.4);
+}
+.accomodations-main .inn-box .img-section {
+    height: 120px;
+}
+.accomodations-main .inn-box img, 
+.most-popular .boxes .row .img-sec img {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.accomodations-main .inn-box:hover, 
+.most-popular .boxes .row:hover,
+.activities .row .col > div:hover {
+    transition: all 0.5s ease-in-out;
+    box-shadow: 2px 11px 38px -14px rgba(0,101,252,0.9);
+    -webkit-box-shadow: 2px 11px 38px -14px rgba(0,101,252,0.9);
+    -moz-box-shadow: 2px 11px 38px -14px rgba(0,101,252,0.9);
+}
+.accomodations-main .inn-box:hover .description, 
+.most-popular .boxes .row:hover .description {
+    color: #0065fc;
+    transition: 0.5s all ease-in-out;
+}
+.accomodations-main p {
+    font-weight: normal;
+    line-height: 1.5;
+}
+.accomodations-main .boxes .description {
+    padding: 7px 10px;
+}
+.mb-price{
+    display: none;
+}
+.accomodations-main .boxes .description h4 {
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+.accomodations-main .boxes .description .stars {
+    display: inline-flex;
+}
+.accomodations-main .boxes .description .stars i {
+    font-size: 12px;
+    color: #0065fc;
+}
+.accomodations-main .boxes .auberge.inn-box .description .stars i.fa-solid.fa-star:last-child,
+.accomodations-main .boxes .les_hotel.inn-box .description .stars i.fa-solid.fa-star:last-child,
+.accomodations-main .boxes .panier.inn-box .description .stars i.fa-solid.fa-star:last-child,
+.accomodations-main .boxes .de_la_mer.inn-box .description .stars i.fa-solid.fa-star:last-child,
+.accomodations-main .boxes .de_la_mer.inn-box .description .stars i.fa-solid.fa-star:nth-child(4),
+.most-popular .boxes .row:nth-child(2) .stars i:last-child, 
+.most-popular .boxes .row:last-child .stars i:last-child{
+    color: #f2f2f2;
+}
+.accomodations-main a {
+    font-weight: 600;
+    font-size: 15px;
+}
+.accomodations-main a:hover{
+    color: #0065fc;
+    transition: 0.5s all ease-in-out;
+}
+.most-popular .heading {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.most-popular .heading i.fa-solid.fa-star {
+    font-size: 18px;
+}
+.most-popular .boxes {
+    flex-direction: column;
+    gap: 0;
+}
+.most-popular .boxes .row a{
+    display: flex;
+}
+.most-popular .boxes .row:last-child {
+    margin-bottom: 0;
+}
+.most-popular .boxes .row .img-sec {
+    width: 30%;
+    height: 130px;
+}
+.most-popular .boxes .row .img-sec img {
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+}
+.most-popular .boxes .row h4 {
+    min-height: 40px;
+}
+.most-popular .boxes .row .description {
+    padding: 10px 0 10px 15px;
+    display: flex;
+    flex-direction: column;
+}
+.most-popular .boxes .row .description .stars {
+    height: 100%;
+    align-items: end;
+}
+
+
+
+/* Activities........................................................... */
+.activities {
+    padding: 25px 0;
+}
+.activities .row {
+    display: flex;
+    gap: 30px;
+    margin: 20px 0 30px;
+}
+.activities .row .col {
+    display: flex;
+    flex: 1;
+    gap: 40px;
+}
+.activities .row .col:nth-child(2), 
+.activities .row .col:last-child {
+    flex-direction: column;
+}
+.activities .row .col img {
+    object-fit: cover;
+    width: 100%;
+    height: 370px;
+    border-radius: 20px 20px 0 0;
+}
+.activities .row .col .small-img {
+    height: 170px;
+}
+.activities .row .col .box2 img {
+    height: 110px;
+}
+.activities h5{
+    text-transform: capitalize;
+    padding: 16px 0 15px 20px;
+    font-size: 15px;
+}
+.activities .row .col > div:hover h5 {
+    color: #0065fc;
+}
+.activities .row .col .box .med-img, 
+.activities .row .col .box2 .med-img {
+    height: 140px;
+}
+.activities .row .col .box-large, 
+.activities .row .col .box, 
+.activities .row .col .box2 {
+    box-shadow: 2px 11px 38px -14px rgba(0,0,0,0.68);
+    -webkit-box-shadow: 2px 11px 38px -14px rgba(0,0,0,0.68);
+    -moz-box-shadow: 2px 11px 38px -14px rgba(0,0,0,0.68);
+    border-radius: 20px;
+}
+
+
+
+/* Footer........................................................... */
+
+footer{
+    background: #F2F2F2;
+}
+footer .row {
+    padding: 30px 0;
+    display: flex;
+}
+footer .row .ft-title {
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-bottom: 14px;
+}
+footer ul li a {
+    font-size: 15px;
+}
+footer nav ul li {
+    margin-bottom: 8px;
+}
+footer .equal-space {
+    width:100%;
+}
+footer ul li a:hover {
+    color: #0065fc;
+    font-weight: 600;
+}
+
+
+
+
